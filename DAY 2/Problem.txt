@@ -1,0 +1,6 @@
+Selection Sort : https://www.codingninjas.com/studio/problems/selection-sort_624469?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+
+Bubble Sort : https://www.codingninjas.com/studio/problems/bubble-sort_624380?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+(in this problem you have to change the arguments of the function from int arr[] to vector<int> &arr
+
+Insertion Sort : https://www.codingninjas.com/studio/problems/insertion-sort_624381?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
