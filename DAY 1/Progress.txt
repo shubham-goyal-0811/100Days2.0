@@ -1,0 +1,1 @@
+I also solved various basic problems of recursion as per my college curriculam and practiced triggers in SQL and learnt about packages in PL/SQL.
