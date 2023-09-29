@@ -1,0 +1,19 @@
+Problem Link : https://leetcode.com/problems/monotonic-array/?envType=daily-question&envId=2023-09-29
+
+
+class Solution {
+public:
+    bool isMonotonic(vector<int>& arr) {
+        bool asc = true;
+        bool dsc = true;
+        for(int i = 1;i<arr.size();i++){
+            if(arr[i]>arr[i-1]){
+                asc = false;
+            }
+            if(arr[i]<arr[i-1]){
+                dsc = false;
+            }
+        }
+        return asc||dsc;
+    }
+};
