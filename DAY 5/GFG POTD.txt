@@ -1,0 +1,36 @@
+PROBLEM LINK : https://practice.geeksforgeeks.org/problems/boundary-traversal-of-matrix-1587115620/1
+
+	int startingrow = 0;
+        int startingcol = 0;
+        int endingrow = n-1;
+        int endingcol = m-1;
+        int totalele = n*m;
+        int count = 0;
+        vector<int> ans;
+        while(count<totalele){
+            for(int i = startingcol;i<=endingcol;i++){
+                ans.push_back(matrix[startingrow][i]);
+                count++;
+            }
+            startingrow++;
+            for(int i = startingrow;i<=endingrow;i++){
+                ans.push_back(matrix[i][endingcol]);
+                count++;
+            }
+            endingcol--;
+            if(count<totalele){
+            for(int i = endingcol;i>=startingcol;i--){
+                ans.push_back(matrix[endingrow][i]);
+                count++;
+            }
+            endingrow--;
+            }
+            if(count < totalele){
+            for(int i = endingrow;i>=startingrow;i--){
+                ans.push_back(matrix[i][startingcol]);
+                count++;
+            }
+            startingcol++;
+            }
+            return ans;
+	}
