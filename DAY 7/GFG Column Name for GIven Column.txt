@@ -1,0 +1,10 @@
+Problem Link : https://practice.geeksforgeeks.org/problems/column-name-from-a-given-column-number4244/1
+
+	string s = "";
+        while(n>0){
+            n--;
+            s+='A'+n%26;
+            n=n/26;
+        }
+        reverse(s.begin(),s.end());
+        return s;
