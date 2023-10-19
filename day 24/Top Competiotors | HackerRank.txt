@@ -1,0 +1,13 @@
+/*
+PROBLEM LINK : https://www.hackerrank.com/challenges/full-score/problem?isFullScreen=true
+*/
+
+set sql_mode='';
+select h.hacker_id,h.name from Hackers as h 
+JOIN Submissions as s ON h.hacker_id=s.hacker_id
+JOIN Challenges c ON c.challenge_id=s.challenge_id 
+JOIN Difficulty d ON d.difficulty_level=c.difficulty_level 
+where s.score=d.score
+GROUP BY h.hacker_id
+HAVING COUNT(c.hacker_id)>1
+ORDER BY COUNT(c.hacker_id) DESC,h.hacker_id ASC;
